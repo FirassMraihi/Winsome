@@ -8,7 +8,7 @@ const Card = ({
 }) => {
   return (
     <View>
-        <Text>hello</Text>
+        <Text>hi</Text>
       <Text>{title}</Text>
       <Text>{description}</Text>
       <Text>{rating}</Text>
