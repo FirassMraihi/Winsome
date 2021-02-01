@@ -1,30 +1,64 @@
 import React from "react";
-import { Image, Text } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
-import { CardWrapper, CardContent, ContentDescription } from "./style";
+import { Image, View, Text } from "react-native";
+import {
+  CardWrapper,
+  BookButtonLabel,
+  CardContent,
+  ContentDescription,
+  BookWrapper,
+  RatingLabel,
+  CardDescription,
+  CardTitle,
+} from "./style";
 
 const Card = ({
   title = "RedBox Barber",
-  description = "Lorem Ipsum",
+  description = "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
   rating = "4.5",
 }) => {
   return (
     <CardWrapper>
-      <Image
-        resizeMode={"cover"}
-        style={{ flex: 1 }}
-        source={require("../assets/image/hair.jpeg")}
-      />
+      <View style={{ height: "60%" }}>
+        <Image
+          resizeMode={"stretch"}
+          style={{
+            height: "100%",
+            width: "100%",
+            borderTopLeftRadius: 5,
+            borderTopRightRadius: 5,
+          }}
+          source={require("../assets/image/hair.jpeg")}
+        />
+      </View>
+
       <CardContent>
-        <ContentDescription>
-          <Text>{title}</Text>
-          <Text>{description}</Text>
+        <ContentDescription flexValue={"2"}>
+          <CardTitle>{title}</CardTitle>
+          <CardDescription numberOfLines={1}>{description}</CardDescription>
         </ContentDescription>
-        <ContentDescription>
-          <Text>{rating}</Text>
-          <TouchableOpacity>
-            <Text>Book</Text>
-          </TouchableOpacity>
+        <ContentDescription flexValue={"1"}>
+          <View
+            style={{
+              alignSelf:'flex-end',
+              width: "70%",
+              flexDirection: "row",
+              justifyContent: "space-evenly",
+              alignItems: "center",
+            }}
+          >
+            <Image
+              resizeMode={"stretch"}
+              style={{
+                height: "80%",
+                width: "25%",
+              }}
+              source={require("../assets/image/star.png")}
+            />
+            <RatingLabel>{rating}</RatingLabel>
+          </View>
+          <BookWrapper>
+            <BookButtonLabel>Book</BookButtonLabel>
+          </BookWrapper>
         </ContentDescription>
       </CardContent>
     </CardWrapper>
