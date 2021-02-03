@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, View, Text } from "react-native";
+import { Image, View } from "react-native";
 import {
   CardWrapper,
   BookButtonLabel,
@@ -24,8 +24,8 @@ const Card = ({
           style={{
             height: "100%",
             width: "100%",
-            borderTopLeftRadius: 5,
-            borderTopRightRadius: 5,
+            borderTopLeftRadius: 10,
+            borderTopRightRadius: 10,
           }}
           source={require("../assets/image/hair.jpeg")}
         />
@@ -47,7 +47,7 @@ const Card = ({
             }}
           >
             <Image
-              resizeMode={"stretch"}
+              resizeMode={"cover"}
               style={{
                 height: "80%",
                 width: "25%",

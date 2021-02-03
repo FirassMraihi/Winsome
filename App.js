@@ -6,8 +6,11 @@ import Home from './src/sceen/home/home';
 export default function App() {
   return (
     <View style={styles.container}>
+      <StatusBar 
+       translucent = {true}  
+      />
       <Home />
-      <StatusBar style="auto" />
+    
     </View>
   );
 }
