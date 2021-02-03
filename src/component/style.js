@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { BLACK, DARKGRAY, GRAY, WHITE } from "../assets/colors";
-import { scaleFont } from "../assets/style/mixins";
+import { BLACK, DARKERORANGE, DARKGRAY, GRAY, SILVER, WHITE } from "../assets/colors";
+import { scaleFont, scaleSize } from "../assets/style/mixins";
 
 const CardWrapper = styled.View`
   border-bottom-width: 0.5;
-  border-left-width: 0.5;
-  border-right-width: 0.5;
+  border-left-width: 0.2;
+  border-right-width: 0.2;
   border-color: gray;
   border-radius: 10;
   display: flex;
@@ -14,7 +14,7 @@ const CardWrapper = styled.View`
 const CardContent = styled.View`
   padding-top: 2%;
   width: 100%;
-  height: 50%;
+  height: 70%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -29,22 +29,22 @@ const ContentDescription = styled.View`
 `;
 const BookWrapper = styled.TouchableOpacity`
   align-self: flex-end;
-  width: 90%;
+  width: 95%;
   position: absolute;
-  bottom: 20%;
+  padding-vertical:21%;
+  padding-horizontal:10%;
+  bottom: 44%;
   height: 30%;
   justify-content: center;
   align-items: center;
-  background-color: #e86656;
+  background-color: ${DARKERORANGE};
   border-top-left-radius: 10;
-  border-bottom-right-radius: 5;
+  border-bottom-right-radius: 10;
 `;
 const BookButtonLabel = styled.Text`
   color: white;
   font-weight: bold;
-  font-size: 17;
-  padding-vertical: 5%;
-  padding-horizontal: 5%;
+  font-size: ${scaleSize(11)};
 `;
 const RatingLabel = styled.Text`
   align-self: flex-end;
@@ -98,7 +98,7 @@ const SquareNumber = styled.Text`
 `;
 const ListHeader = styled.View`
   display: flex;
-  padding-left: 5%;
+  padding-left: 2%;
   padding-right: 5%;
   width: 100%;
   flex-direction: row;
@@ -121,7 +121,7 @@ const ListTitle =styled.Text`
  font-size:${scaleFont(20)};
 `
 const SeeMore=styled.Text`
-color:${DARKGRAY};
+color:${GRAY};
 font-weight:bold;
 font-size:${scaleFont(15)};
 `

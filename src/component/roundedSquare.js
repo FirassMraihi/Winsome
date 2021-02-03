@@ -1,6 +1,6 @@
 import React from "react";
 import { Text } from "react-native";
-import { DARKERORANGE } from "../assets/colors";
+import { DARKERORANGE, WHITE } from "../assets/colors";
 import { SquareImage, SquareNumber, SquareTitle, SquareWrapper } from "./style";
 
 const RoundedSquare = ({
@@ -11,7 +11,7 @@ const RoundedSquare = ({
   return (
     <SquareWrapper>
       <SquareImage color={color}>
-        <Text>Icon</Text>
+        <Text style={{ color: WHITE }}>Icon</Text>
       </SquareImage>
       <SquareTitle>{title}</SquareTitle>
       <SquareNumber>{number} Places</SquareNumber>

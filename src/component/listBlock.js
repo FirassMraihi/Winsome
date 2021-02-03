@@ -1,9 +1,9 @@
 import React from "react";
 import { FlatList, TouchableOpacity, SafeAreaView, View } from "react-native";
+import { scaleSize } from "../assets/style/mixins";
 import {
   ListHeader,
   ListTitle,
-  ListContent,
   SeeMore,
   ListContainer,
 } from "./style";
@@ -13,7 +13,7 @@ const ListBlock = ({
   data,
   Component,
   onClick,
-  elementWidth=80,
+  elementWidth=scaleSize(70),
 }) => {
   return (
     <ListContainer>
@@ -24,10 +24,10 @@ const ListBlock = ({
         </TouchableOpacity>
       </ListHeader>
       <FlatList
-        style={{ paddingLeft: "1%",height:'100%'}}
-        contentContainerStyle={{paddingTop:'1%'}}
+        style={{ height:'100%'}}
+        contentContainerStyle={{paddingTop:'0.5%',paddingRight:'50%',paddingLeft:'2%'}}
         data={data}
-        ItemSeparatorComponent={() => <View style={{ width: "2%" }}></View>}
+        ItemSeparatorComponent={() => <View style={{ width: "1%" }}></View>}
         showsHorizontalScrollIndicator={false}
         horizontal={true}
         renderItem={(element) => {
@@ -37,7 +37,7 @@ const ListBlock = ({
               style={{
                 width: elementWidth ,
                 alignItems: "flex-start",
-                height: "88%",
+                height: "75%",
               }}
             >
               {elementUi}

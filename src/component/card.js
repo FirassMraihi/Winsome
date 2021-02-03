@@ -57,7 +57,7 @@ const Card = ({
             <RatingLabel>{rating}</RatingLabel>
           </View>
           <BookWrapper>
-            <BookButtonLabel>Book</BookButtonLabel>
+            <BookButtonLabel>Reservez</BookButtonLabel>
           </BookWrapper>
         </ContentDescription>
       </CardContent>
