@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Home from './src/sceen/home/home';
+import Profil from './src/sceen/profil';
 
 export default function App() {
   return (
@@ -9,7 +9,7 @@ export default function App() {
       <StatusBar 
        translucent = {true}  
       />
-      <Home />
+      <Profil/>
     
     </View>
   );

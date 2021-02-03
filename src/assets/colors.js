@@ -9,8 +9,10 @@ const PINK = "#E6587B";
 const PURPLE = "#615DD9";
 const SILVER = "#C0C0C0";
 const ORANGE = "#EE9353";
+const GAINSBRORO = "#DCDCDC";
 export {
   SALAMON,
+  GAINSBRORO,
   SILVER,
   DARKERORANGE,
   NAVYBLUE,
