@@ -1,6 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text } from "react-native";
-import { NameLabel, ProfilDescription, RatingWrapper } from "./style/style";
+import {
+  ActionsWrapper,
+  NameLabel,
+  ProfilContent,
+  ProfilDescription,
+  RatingWrapper,
+} from "./style/style";
+import {
+  CircularWrapper,
+  GeneralInfo,
+  CoverImageContainer,
+} from "../../component/style";
+import { ORANGE, PURPLE, SALAMON } from "../../assets/colors";
+import Wallpaper from "./component/wallpaper";
+import Avatar from "./component/avatar";
+import Menu from "./component/menu";
+import Informations from "./component/informations";
+import PhotosList from "./component/photosList";
+import StatusLabel from "../../component/statusLabel";
+import { ScrollView } from "react-native-gesture-handler";
+import Services from "./component/services";
+import { INFORMATIONS, PORTFOLIO, REVIEW } from "./constants";
+import Comment from "../../component/comment";
+import CommentsList from "../../component/commentsList";
 import { scaleSize } from "../../assets/style/mixins";
 
 const Profil = ({
@@ -9,13 +32,23 @@ const Profil = ({
   rating = 2,
   reviews = "125",
 }) => {
+  const [toggle, setToggle] = useState("informations");
+  const toggleMenu = (value) => {
+    setToggle(() => value);
+  };
   return (
-    <View style={{ width: "100%", height: "100%" }}>
+    <ScrollView style={{ width:'100%',height:'100%'}}>
+      <CoverImageContainer>
+        <Wallpaper />
+        <StatusLabel />
+        <Avatar />
+      </CoverImageContainer>
       <ProfilDescription>
-        <NameLabel>{name}</NameLabel>
-        <Text>{title}</Text>
-        <RatingWrapper>
-          {/*   <Stars
+        <GeneralInfo>
+          <NameLabel>{name}</NameLabel>
+          <Text>{title}</Text>
+          <RatingWrapper>
+            {/*   <Stars
             half={true}
             default={2.5}
             update={(val) => {
@@ -28,11 +61,38 @@ const Profil = ({
             emptyStar={require("./images/starEmpty.png")}
             halfStar={require("./images/starHalf.png")}
         />*/}
-
-          <Text>({reviews} Reviews)</Text>
-        </RatingWrapper>
+            <Text>({reviews} Reviews)</Text>
+          </RatingWrapper>
+        </GeneralInfo>
+        <ActionsWrapper>
+          <CircularWrapper color={ORANGE} />
+          <CircularWrapper color={PURPLE} />
+          <CircularWrapper color={SALAMON} />
+          <CircularWrapper color={PURPLE} />
+        </ActionsWrapper>
+        <View
+          style={{
+            width: "100%",
+            height: "18%",
+            marginTop: "2%",
+            justifyContent: "center",
+          }}
+        >
+          <Menu toggleMenu={toggleMenu} />
+        </View>
       </ProfilDescription>
-    </View>
+
+      {toggle === INFORMATIONS && (
+        <ProfilContent>
+          <PhotosList />
+          <Informations />
+          <Services />
+        </ProfilContent>
+      )}
+      {toggle === PORTFOLIO && <Text>hhh</Text>}
+
+      {toggle === REVIEW && <CommentsList />}
+    </ScrollView>
   );
 };
 

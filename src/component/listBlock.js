@@ -25,7 +25,7 @@ const ListBlock = ({
       </ListHeader>
       <FlatList
         style={{ height:'100%'}}
-        contentContainerStyle={{paddingTop:'0.5%',paddingRight:'50%',paddingLeft:'2%'}}
+        contentContainerStyle={{paddingTop:'0.5%',paddingRight:'15%',paddingLeft:'2%'}}
         data={data}
         ItemSeparatorComponent={() => <View style={{ width: "1%" }}></View>}
         showsHorizontalScrollIndicator={false}

@@ -1,5 +1,12 @@
 import styled from "styled-components";
-import { BLACK, DARKERORANGE, DARKGRAY, GRAY, SILVER, WHITE } from "../assets/colors";
+import {
+  BLACK,
+  DARKERORANGE,
+  DARKGRAY,
+  GRAY,
+  PINK,
+  WHITE,
+} from "../assets/colors";
 import { scaleFont, scaleSize } from "../assets/style/mixins";
 
 const CardWrapper = styled.View`
@@ -31,8 +38,8 @@ const BookWrapper = styled.TouchableOpacity`
   align-self: flex-end;
   width: 95%;
   position: absolute;
-  padding-vertical:21%;
-  padding-horizontal:10%;
+  padding-vertical: 21%;
+  padding-horizontal: 10%;
   bottom: 44%;
   height: 30%;
   justify-content: center;
@@ -111,21 +118,82 @@ const ListContent = styled.View`
   flex-direction: row;
 `;
 const ListContainer = styled.View`
-  height:100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 `;
-const ListTitle =styled.Text`
- color:${BLACK};
- font-weight:bold;
- font-size:${scaleFont(20)};
-`
-const SeeMore=styled.Text`
-color:${GRAY};
-font-weight:bold;
-font-size:${scaleFont(15)};
-`
+const ListTitle = styled.Text`
+  color: ${BLACK};
+  font-weight: bold;
+  font-size: ${scaleFont(20)};
+`;
+const SeeMore = styled.Text`
+  color: ${GRAY};
+  font-weight: bold;
+  font-size: ${scaleFont(15)};
+`;
+const CircularWrapper = styled.TouchableOpacity`
+  background-color: ${(props) => (props.color ? props.color : PINK)};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: ${(props) => (props.width ? props.width : `15%`)};
+  border-radius: 100;
+`;
+const CoverImageContainer = styled.View`
+  width: 100%;
+  height: ${scaleSize(120)};
+`;
+const GeneralInfo = styled.View`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+const StatusWrapper = styled.Text`
+  color: ${(props) => (props.status === "Ouvert" ? "green" : "red")};
+  text-align: center;
+  border-width: 1px;
+  border-color: ${(props) => (props.status === "Ouvert" ? "green" : "red")};
+  border-radius: 10;
+  position: absolute;
+  margin-top: 140;
+  margin-left: 5;
+  padding-horizontal: 2%;
+  padding-vertical: 1%;
+  z-index: 10;
+`;
+const CommentWrapper = styled.View`
+  padding-vertical: 3%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left:1%;
+  margin-right:1%;
+  color: ${GRAY};
+`;
+const CommentDescription = styled.View`
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  padding-left: 1%;
+`;
+const CommentContent = styled.Text`
+  font-size: ${scaleFont(14)};
+`;
+const UserName = styled.Text`
+  font-size: ${scaleFont(17)};
+  color: ${BLACK};
+`;
 export {
+  UserName,
+  CommentContent,
+  CommentDescription,
+  CommentWrapper,
+  StatusWrapper,
+  GeneralInfo,
+  CoverImageContainer,
+  CircularWrapper,
   SeeMore,
   ListTitle,
   ListContainer,
