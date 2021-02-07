@@ -15,6 +15,7 @@ const Card = ({
   title = "RedBox Barber",
   description = "Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
   rating = "4.5",
+  navigation
 }) => {
   return (
     <CardWrapper>
@@ -56,7 +57,7 @@ const Card = ({
             />
             <RatingLabel>{rating}</RatingLabel>
           </View>
-          <BookWrapper>
+          <BookWrapper  onPress={()=>navigation.navigate('Profil')}>
             <BookButtonLabel>Reservez</BookButtonLabel>
           </BookWrapper>
         </ContentDescription>

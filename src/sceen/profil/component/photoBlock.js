@@ -5,11 +5,24 @@ const PhotoBlock = ({
   imagePath = "../../../assets/image/profilImage.jpg",
 }) => {
   return (
-    <Image
-      style={{ width: "100%", height: "100%", borderRadius: 20 }}
-      resizeMode={"cover"}
-      source={require("../../../assets/image/profilImage.jpg")}
-    />
+    <View
+      style={{
+        paddingLeft: "2%",
+        paddingRight: "2%",
+        height:'100%',
+        width:'100%'
+      }}
+    >
+      <Image
+        style={{
+          width: "100%",
+          height: "100%",
+          borderRadius: 15,
+        }}
+        resizeMode={"cover"}
+        source={require("../../../assets/image/profilImage.jpg")}
+      />
+    </View>
   );
 };
 

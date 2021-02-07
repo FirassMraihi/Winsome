@@ -24,10 +24,8 @@ const ListBlock = ({
         </TouchableOpacity>
       </ListHeader>
       <FlatList
-        style={{ height:'100%'}}
-        contentContainerStyle={{paddingTop:'0.5%',paddingRight:'15%',paddingLeft:'2%'}}
+        style={{ height:'100%',marginTop:'2%'}}
         data={data}
-        ItemSeparatorComponent={() => <View style={{ width: "1%" }}></View>}
         showsHorizontalScrollIndicator={false}
         horizontal={true}
         renderItem={(element) => {

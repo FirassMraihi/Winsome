@@ -1,12 +1,14 @@
 import React from 'react'
-import { TextInput } from 'react-native-gesture-handler'
+import { WHITE } from '../assets/colors'
 import { TextInputStyle } from './style'
 
-const RoundedInput = ({onChangeText}) => {
+const RoundedInput = ({height,onChangeText,placeholder='Chercher salon,spa ou coiffeur',color=WHITE}) => {
     return (
         <TextInputStyle
+        height={height}
+        color={color}
         onChangeText={text => onChangeText(text)}
-        placeholder={'Chercher salon,spa ou coiffeur'}
+        placeholder={placeholder}
       />
     )
 }

@@ -6,14 +6,14 @@ import {
   GRAY,
   PINK,
   WHITE,
+  GAINSBRORO,
 } from "../assets/colors";
 import { scaleFont, scaleSize } from "../assets/style/mixins";
 
 const CardWrapper = styled.View`
-  border-bottom-width: 0.5;
-  border-left-width: 0.2;
-  border-right-width: 0.2;
-  border-color: gray;
+  border-bottom-width: 0.7;
+  border-color: ${GAINSBRORO};
+  padding-Horizontal:2%;
   border-radius: 10;
   display: flex;
   flex-direction: column;
@@ -66,11 +66,11 @@ const CardTitle = styled.Text`
 `;
 
 const TextInputStyle = styled.TextInput`
-  background-color: ${WHITE};
+  background-color: ${({ color }) => (color ? color : WHITE)};
   border-radius: 10;
   width: 80%;
-  height: 30%;
-  padding: 1%;
+  height: ${({ height }) => (height ? height : "30%")};
+  padding-left: 5%;
   color: ${BLACK};
 `;
 const InputHeader = styled.Text`
@@ -81,6 +81,7 @@ const InputHeader = styled.Text`
 
 const SquareWrapper = styled.View`
   flex-direction: column;
+  padding-Horizontal:2%;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -125,7 +126,7 @@ const ListContainer = styled.View`
 const ListTitle = styled.Text`
   color: ${BLACK};
   font-weight: bold;
-  font-size: ${scaleFont(20)};
+  font-size: ${({ size }) => (size ? scaleFont(size) : scaleFont(20))};
 `;
 const SeeMore = styled.Text`
   color: ${GRAY};
@@ -168,8 +169,8 @@ const CommentWrapper = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-left:1%;
-  margin-right:1%;
+  padding-left: 1%;
+  margin-right: 1%;
   color: ${GRAY};
 `;
 const CommentDescription = styled.View`
@@ -185,7 +186,32 @@ const UserName = styled.Text`
   font-size: ${scaleFont(17)};
   color: ${BLACK};
 `;
+const RoundedButtonWrapper = styled.TouchableOpacity`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 7%;
+  border-radius: 50;
+  background-color: ${PINK};
+`;
+const ButtonLabel = styled.Text`
+  color: ${WHITE};
+  text-align: center;
+  font-size: ${scaleFont(20)};
+  font-weight: bold;
+`;
+const NoticeWrapper = styled.View`
+  padding-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
 export {
+  NoticeWrapper,
+  ButtonLabel,
+  RoundedButtonWrapper,
   UserName,
   CommentContent,
   CommentDescription,

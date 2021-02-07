@@ -9,7 +9,7 @@ import RoundedSquare from "../../component/roundedSquare";
 import Header from "./component/header";
 import data from "./data";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <ScrollView
       style={{
@@ -43,8 +43,9 @@ const Home = () => {
         <ListBlock
           title={"Top Salon"}
           data={data}
+          navigation={navigation}
           elementWidth={scaleSize(230)}
-          Component={<Card />}
+          Component={<Card navigation={navigation} />}
           onCLick={() => console.log("triggered")}
         />
       </View>

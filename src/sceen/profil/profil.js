@@ -22,9 +22,7 @@ import StatusLabel from "../../component/statusLabel";
 import { ScrollView } from "react-native-gesture-handler";
 import Services from "./component/services";
 import { INFORMATIONS, PORTFOLIO, REVIEW } from "./constants";
-import Comment from "../../component/comment";
 import CommentsList from "../../component/commentsList";
-import { scaleSize } from "../../assets/style/mixins";
 
 const Profil = ({
   name = "Daniel William",
