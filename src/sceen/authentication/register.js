@@ -21,7 +21,7 @@ const Register = ({ navigation }) => {
           style={{
             width: "100%",
             height: scaleSize(60),
-            
+
             justifyContent: "center",
             alignItems: "center",
           }}
@@ -31,12 +31,12 @@ const Register = ({ navigation }) => {
             color={GAINSBRORO}
             placeholder={"Login"}
           />
-        </View> 
+        </View>
         <View
           style={{
             width: "100%",
             height: scaleSize(60),
-            
+
             justifyContent: "center",
             alignItems: "center",
           }}
@@ -46,12 +46,12 @@ const Register = ({ navigation }) => {
             color={GAINSBRORO}
             placeholder={"Email"}
           />
-        </View> 
+        </View>
         <View
           style={{
             width: "100%",
             height: scaleSize(60),
-            
+
             justifyContent: "center",
             alignItems: "center",
           }}
@@ -61,12 +61,12 @@ const Register = ({ navigation }) => {
             color={GAINSBRORO}
             placeholder={"Numero de Telephone"}
           />
-        </View> 
+        </View>
         <View
           style={{
             width: "100%",
             height: scaleSize(60),
-            
+
             justifyContent: "center",
             alignItems: "center",
           }}
@@ -81,7 +81,7 @@ const Register = ({ navigation }) => {
           style={{
             width: "100%",
             height: scaleSize(60),
-            
+
             justifyContent: "center",
             alignItems: "center",
           }}
@@ -93,16 +93,16 @@ const Register = ({ navigation }) => {
           />
         </View>
       </RegisterFormWrapper>
-      <RoundedButton
-        onPress={() => navigation.navigate("Login")}
-        label={"S'Enregistrer"}
-      />
-      <NoticeWrapper>
-        <Text>Vous avez déja un compte ? </Text>
-        <LabelNavigateWrapper onPress={() => navigation.navigate("Login")}>
-          <LabelNavigate>Se Connecter</LabelNavigate>
-        </LabelNavigateWrapper>
-      </NoticeWrapper>
+        <RoundedButton
+          onPress={() => navigation.navigate("Login")}
+          label={"S'Enregistrer"}
+        />
+        <NoticeWrapper>
+          <Text>Vous avez déja un compte ? </Text>
+          <LabelNavigateWrapper onPress={() => navigation.navigate("Login")}>
+            <LabelNavigate>Se Connecter</LabelNavigate>
+          </LabelNavigateWrapper>
+        </NoticeWrapper>
     </RegisterWrapper>
   );
 };

@@ -9,9 +9,6 @@ const Menu = ({toggleMenu}) => {
       <TouchableOpacity onPress={()=>toggleMenu(INFORMATIONS)}>
         <MenuLabel>Informations</MenuLabel>
       </TouchableOpacity>
-      <TouchableOpacity onPress={()=>toggleMenu(PORTFOLIO)}>
-        <MenuLabel>Portfolio</MenuLabel>
-      </TouchableOpacity>
       <TouchableOpacity onPress={()=>toggleMenu(REVIEW)}>
         <MenuLabel>Review</MenuLabel>
       </TouchableOpacity>

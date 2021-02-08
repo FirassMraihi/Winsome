@@ -1,33 +1,58 @@
 import React from "react";
 import { View, Text, ImageBackground } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { GAINSBRORO, WHITE } from "../../../assets/colors";
 import RoundedInput from "../../../component/roundedInput";
-import { InputHeader } from "../../../component/style";
+import { InputHeader, ListHeader } from "../../../component/style";
+import { PathLabel } from "../../profil/style/style";
 import { HomeImageWrapper } from "../style/style";
-const Header = () => {
+const Header = ({ user = "Jane" }) => {
   return (
-    <ImageBackground
+    <View
       style={{
-        width: "100%",
-        height: "95%",
-        flexDirection: "column",
+        flex: 1,
+        paddingLeft: "3%",
+        paddingTop: "7%",
+        paddingRight: "3%",
       }}
-      imageStyle={{ borderBottomRightRadius: 30, borderBottomLeftRadius: 30 }}
-      source={require("../../../assets/image/homeWalpaper.jpg")}
     >
-      <View style={{ flex: 1 }}></View>
       <View
         style={{
           flex: 1,
-          paddingBottom:"5%",
-          justifyContent: "space-evenly",
-          alignItems: "center",
+          alignItems: "flex-start",
           flexDirection: "column",
+          justifyContent: "space-between",
         }}
       >
-          <InputHeader>Trouvez et commendez des bons services</InputHeader>
-        <RoundedInput />
+        <InputHeader size={20}>Bonjour {user}</InputHeader>
+        <View style={{ height: "40%", width: "100%", paddingTop: "5%" }}>
+          <Text>Votre Position</Text>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              width: "100%",
+            }}
+          >
+            <InputHeader size={15}>San Fransisco city</InputHeader>
+            <TouchableOpacity>
+              <PathLabel size={13}>CHANGER</PathLabel>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <View
+          style={{
+            height: "35%",
+            width: "100%",
+            alignItems: "center",
+            justifyContent: "center",
+            paddingTop: "2%",
+          }}
+        >
+          <RoundedInput color={GAINSBRORO} height={"80%"} />
+        </View>
       </View>
-    </ImageBackground>
+    </View>
   );
 };
 

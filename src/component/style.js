@@ -74,18 +74,19 @@ const TextInputStyle = styled.TextInput`
   color: ${BLACK};
 `;
 const InputHeader = styled.Text`
-  color: ${WHITE};
-  font-size: ${scaleFont(18)};
+  color: ${BLACK};
+  font-size: ${({size})=>size ? size : scaleFont(18)};
   font-weight: bold;
 `;
 
 const SquareWrapper = styled.View`
   flex-direction: column;
   padding-Horizontal:2%;
+  padding-top:9%;
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 100%;
+  width: 90%;
 `;
 const SquareImage = styled.View`
   justify-content: center;

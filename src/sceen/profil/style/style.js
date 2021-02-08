@@ -48,7 +48,7 @@ const AvatarWrapper = styled.View`
     z-index:10;
 `;
 const ProfilContent = styled.View`
-padding-top:2%;
+  padding-top: 2%;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -59,6 +59,7 @@ const MenuWrapper = styled.View`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items:flex-end;
   background-color: ${GAINSBRORO};
 `;
 const MenuLabel = styled.Text`
@@ -86,7 +87,7 @@ const AddressDescription = styled.View`
 `;
 const PathLabel = styled.Text`
   color: ${PINK};
-  font-size: ${scaleFont(15)};
+  font-size: ${({ size }) => (size ? size : scaleFont(15))};
 `;
 const ServiceLabel = styled.Text`
   color: ${GRAY};

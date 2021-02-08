@@ -21,7 +21,7 @@ import PhotosList from "./component/photosList";
 import StatusLabel from "../../component/statusLabel";
 import { ScrollView } from "react-native-gesture-handler";
 import Services from "./component/services";
-import { INFORMATIONS, PORTFOLIO, REVIEW } from "./constants";
+import { INFORMATIONS, REVIEW } from "./constants";
 import CommentsList from "../../component/commentsList";
 
 const Profil = ({
@@ -73,7 +73,8 @@ const Profil = ({
             width: "100%",
             height: "18%",
             marginTop: "2%",
-            justifyContent: "center",
+            //alignItems:'flex-end',
+            justifyContent: "flex-end",
           }}
         >
           <Menu toggleMenu={toggleMenu} />
@@ -87,7 +88,6 @@ const Profil = ({
           <Services />
         </ProfilContent>
       )}
-      {toggle === PORTFOLIO && <Text>hhh</Text>}
 
       {toggle === REVIEW && <CommentsList />}
     </ScrollView>

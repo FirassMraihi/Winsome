@@ -17,13 +17,13 @@ const Home = ({ navigation }) => {
         flexDirection: "column",
       }}
     >
-      <View style={{ height: scaleSize(250), width: scaleSize(375) }}>
+      <View style={{ height: scaleSize(200), width: scaleSize(375) }}>
         <Header />
       </View>
       <View
         style={{
           width: scaleSize(375),
-          height: scaleSize(160),
+          height: scaleSize(165),
         }}
       >
         <ListBlock
@@ -44,7 +44,7 @@ const Home = ({ navigation }) => {
           title={"Top Salon"}
           data={data}
           navigation={navigation}
-          elementWidth={scaleSize(230)}
+          elementWidth={scaleSize(240)}
           Component={<Card navigation={navigation} />}
           onCLick={() => console.log("triggered")}
         />
