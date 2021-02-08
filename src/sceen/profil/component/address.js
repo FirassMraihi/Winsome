@@ -18,10 +18,10 @@ const Address = ({
         <ListTitle>Address</ListTitle>
         <Text numberOfLines={2}>{address}</Text>
         <TouchableOpacity>
-          <PathLabel>Avoir le Téméraire</PathLabel>
+          <PathLabel>Avoir le Ténéraire</PathLabel>
         </TouchableOpacity>
       </AddressDescription>
-      <View style={{ flex: 1, backgroundColor: GRAY }}>
+      <View style={{ flex: 1, height:'100%',backgroundColor: GRAY }}>
         <Text>map</Text>
       </View>
     </AddressContainer>

@@ -1,11 +1,10 @@
 import React from "react";
-import { View, Text, ImageBackground } from "react-native";
+import { View, Text } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { GAINSBRORO, WHITE } from "../../../assets/colors";
+import { GAINSBRORO } from "../../../assets/colors";
 import RoundedInput from "../../../component/roundedInput";
-import { InputHeader, ListHeader } from "../../../component/style";
+import { InputHeader } from "../../../component/style";
 import { PathLabel } from "../../profil/style/style";
-import { HomeImageWrapper } from "../style/style";
 const Header = ({ user = "Jane" }) => {
   return (
     <View

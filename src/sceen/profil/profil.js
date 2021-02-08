@@ -35,7 +35,9 @@ const Profil = ({
     setToggle(() => value);
   };
   return (
-    <ScrollView style={{ width:'100%',height:'100%'}}>
+    <ScrollView 
+    showsVerticalScrollIndicator={false}
+    style={{ width:'100%',height:'100%'}}>
       <CoverImageContainer>
         <Wallpaper />
         <StatusLabel />
@@ -63,17 +65,15 @@ const Profil = ({
           </RatingWrapper>
         </GeneralInfo>
         <ActionsWrapper>
-          <CircularWrapper color={ORANGE} />
-          <CircularWrapper color={PURPLE} />
           <CircularWrapper color={SALAMON} />
-          <CircularWrapper color={PURPLE} />
+          <CircularWrapper color={SALAMON} />
+          <CircularWrapper color={SALAMON} />
         </ActionsWrapper>
         <View
           style={{
             width: "100%",
             height: "18%",
             marginTop: "2%",
-            //alignItems:'flex-end',
             justifyContent: "flex-end",
           }}
         >

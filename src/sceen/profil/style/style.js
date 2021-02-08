@@ -5,6 +5,7 @@ import {
   GRAY,
   LIGHTGREEN,
   PINK,
+  SALAMON,
 } from "../../../assets/colors";
 import { scaleFont, scaleSize } from "../../../assets/style/mixins";
 
@@ -77,7 +78,7 @@ const PhotoListWrapper = styled.View`
   height: ${scaleSize(110)};
 `;
 const AddressContainer = styled.View`
-  height: 60%;
+  height: 90%;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -96,7 +97,7 @@ const ServiceLabel = styled.Text`
   font-weight: bold;
 `;
 const ServicePrice = styled.Text`
-  color: ${LIGHTGREEN};
+  color: ${SALAMON};
   font-size: ${scaleFont(20)};
   font-weight: bold;
   text-align: center;

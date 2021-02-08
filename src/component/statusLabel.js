@@ -1,5 +1,4 @@
 import React from "react";
-import {Text} from 'react-native'
 import { StatusWrapper } from "./style";
 
 const StatusLabel = ({ status = "Ouvert" }) => {

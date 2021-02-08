@@ -12,6 +12,7 @@ import data from "./data";
 const Home = ({ navigation }) => {
   return (
     <ScrollView
+    showsVerticalScrollIndicator={false}
       style={{
         flex: 1,
         flexDirection: "column",
@@ -28,7 +29,7 @@ const Home = ({ navigation }) => {
       >
         <ListBlock
           data={data}
-          Component={<RoundedSquare />}
+          Component={<RoundedSquare navigation={navigation} />}
           title={"Top Categories"}
           onCLick={() => console.log("triggered")}
         />

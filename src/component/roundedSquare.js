@@ -7,9 +7,10 @@ const RoundedSquare = ({
   color = DARKERORANGE,
   title = "Salon",
   number = "18",
+  navigation
 }) => {
   return (
-    <SquareWrapper>
+    <SquareWrapper onPress={()=>navigation.navigate('SearchResult')}>
       <SquareImage color={color}>
         <Text style={{ color: WHITE }}>Icon</Text>
       </SquareImage>

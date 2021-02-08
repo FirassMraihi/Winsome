@@ -13,7 +13,7 @@ import { scaleFont, scaleSize } from "../assets/style/mixins";
 const CardWrapper = styled.View`
   border-bottom-width: 0.7;
   border-color: ${GAINSBRORO};
-  padding-Horizontal:2%;
+  padding-horizontal: 2%;
   border-radius: 10;
   display: flex;
   flex-direction: column;
@@ -68,21 +68,21 @@ const CardTitle = styled.Text`
 const TextInputStyle = styled.TextInput`
   background-color: ${({ color }) => (color ? color : WHITE)};
   border-radius: 10;
-  width: 80%;
+  width: ${({ width }) => (width ? width : "80%")};
   height: ${({ height }) => (height ? height : "30%")};
   padding-left: 5%;
   color: ${BLACK};
 `;
 const InputHeader = styled.Text`
   color: ${BLACK};
-  font-size: ${({size})=>size ? size : scaleFont(18)};
+  font-size: ${({ size }) => (size ? size : scaleFont(18))};
   font-weight: bold;
 `;
 
-const SquareWrapper = styled.View`
+const SquareWrapper = styled.TouchableOpacity`
   flex-direction: column;
-  padding-Horizontal:2%;
-  padding-top:9%;
+  padding-horizontal: 2%;
+  padding-top: 9%;
   justify-content: center;
   align-items: center;
   height: 100%;

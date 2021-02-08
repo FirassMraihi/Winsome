@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import Home from "../sceen/home/home";
 import Profil from "../sceen/profil";
 import AuthenticationNavigation from "./authenticationNavigation";
+import SearchResult from "../sceen/searchResult";
 
 const Stack = createStackNavigator();
 
@@ -14,7 +15,7 @@ function StackNavigation() {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Profil" component={Profil} />
         <Stack.Screen name="Authentication" component={AuthenticationNavigation} />
-      
+        <Stack.Screen name="SearchResult" component={SearchResult} />
       </Stack.Navigator>
     </NavigationContainer>
   );

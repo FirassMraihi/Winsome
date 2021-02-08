@@ -22,7 +22,7 @@ const data = [
 const Services = () => {
   return (
     <View style={{ height: "100%" }}>
-      <ListTitle>Services</ListTitle>
+      <ListTitle>Tarifs</ListTitle>
       <View
         style={{
           paddingTop: "1.5%",
