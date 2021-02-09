@@ -10,18 +10,21 @@ const ListBlock = ({
   onClick,
   elementWidth = scaleSize(70),
   horizontal = true,
-  elementheight = "75%",
+  elementHeight = "75%",
+  voirTout=true
 }) => {
   return (
     <ListContainer>
       <ListHeader>
         <ListTitle>{title}</ListTitle>
-        <TouchableOpacity onPress={() => onClick}>
-          <SeeMore>Voir Tout</SeeMore>
-        </TouchableOpacity>
+        {voirTout && (
+          <TouchableOpacity onPress={() => onClick}>
+            <SeeMore>Voir Tout</SeeMore>
+          </TouchableOpacity>
+        )}
       </ListHeader>
       <FlatList
-        style={{ height: "100%" }}
+        style={{ height: "100%", width: "100%" }}
         data={data}
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
@@ -33,7 +36,7 @@ const ListBlock = ({
               style={{
                 width: elementWidth,
                 alignItems: "flex-start",
-                height: elementheight,
+                height: elementHeight,
               }}
             >
               {elementUi}

@@ -1,34 +1,48 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
-import { GAINSBRORO } from "../assets/colors";
+import { Text, Image, View } from "react-native";
+import { InputHeader, SearchCardWrapper } from "./style";
 
-const SearchCard = () => {
+const SearchCard = ({
+  title = "Redbox Barber",
+  description = "something somethingsomethingsomethingsomething",
+}) => {
   return (
-    <TouchableOpacity
-      style={{
-        borderBottomColor: GAINSBRORO,
-        borderBottomWidth:0.5,
-        width: "100%",
-        height:'100%',
-        flexDirection: "row"
-      }}
-    >
-      <Image
-        style={{
-          width: '40%',
-          height:'90%',
-          borderRadius: 50,
-          alignSelf: "center",
-        }}
-        resizeMode={"stretch"}
-        source={require("../assets/image/profilImage.jpg")}
-      />
-      <View style={{ width: "60%",paddingLeft:'2%'}}>
-        <Text>hello</Text>
-        <Text>hello ther</Text>
+    <SearchCardWrapper>
+      <View style={{ height: "90%", width: "25%" }}>
+        <Image
+          style={{
+            height: "100%",
+            width: "100%",
+            borderRadius: 10,
+          }}
+          source={require("../assets/image/malibu.jpeg")}
+        />
       </View>
-    </TouchableOpacity>
+
+      <View style={{ width: "72%", height: "100%", paddingLeft: "3%" }}>
+        <InputHeader size={15}>{title}</InputHeader>
+        <View style={{ flexDirection: "row", height: "15%", width: "5%" }}>
+          <Image
+            resizeMode={"stretch"}
+            style={{
+              height: "100%",
+              width: "100%",
+            }}
+            source={require("../assets/image/star.png")}
+          />
+          <Image
+            resizeMode={"stretch"}
+            style={{
+              height: "100%",
+              width: "100%",
+            }}
+            source={require("../assets/image/star.png")}
+          />
+        </View>
+
+        <Text numberOfLines={2}>{description}</Text>
+      </View>
+    </SearchCardWrapper>
   );
 };
 

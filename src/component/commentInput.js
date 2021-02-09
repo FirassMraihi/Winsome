@@ -8,7 +8,14 @@ import { CommentWrapper } from "./style";
 
 const CommentInput = () => {
   return (
-    <CommentWrapper style={{ paddingRight: "2%", alignContent: "center" }}>
+    <CommentWrapper
+      style={{
+        paddingRight: "2%",
+        alignContent: "center",
+        paddingBottom: "15%",
+        paddingTop:'10%'
+      }}
+    >
       <Image
         style={{
           width: scaleSize(50),
@@ -23,15 +30,13 @@ const CommentInput = () => {
         <View style={{ width: "95%" }}>
           <RoundedInput
             width={"100%"}
-            height={"100%"}
+            height={"95%"}
             placeholder={"Veuillez laisser un commentaire"}
           />
         </View>
 
-        <TouchableOpacity>
-          <PathLabel style={{ alignSelf: "flex-end", paddingTop: "2%" }}>
-            Publier
-          </PathLabel>
+        <TouchableOpacity style={{ alignSelf: "flex-end", marginTop: "1%" }}>
+          <PathLabel>Publier</PathLabel>
         </TouchableOpacity>
       </View>
     </CommentWrapper>

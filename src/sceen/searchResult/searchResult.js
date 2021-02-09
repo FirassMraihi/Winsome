@@ -8,38 +8,34 @@ import data from "../home/data";
 
 const SearchResult = () => {
   return (
-    <View
-      style={{
-        paddingLeft: "2%",
-        height: "100%",
-        width: "100%",
-      }}
-    >
+    <View style={{ paddingTop: "10%", height: "100%", width: "100%" }}>
       <View
         style={{
-          height: "20%",
+          height: "10%",
+          width: "100%",
           justifyContent: "center",
           alignItems: "center",
         }}
       >
-        <RoundedInput />
+        <RoundedInput height={"70%"} width={"80%"} />
       </View>
       <View
         style={{
           paddingTop: "1%",
-          width: scaleSize(375),
-          height: scaleSize(800),
+          width: "100%",
+          height: "90%",
         }}
       >
-      <ListBlock
-        data={data}
-        elementWidth={'100%'}
-        Component={<SearchCard />}
-        title={"Resultats Trouvée"}
-        onCLick={() => console.log("triggered")}
-        horizontal={false}
-        elementheight={scaleSize('90')}
-      />
+        <ListBlock
+          voirTout={false}
+          data={data}
+          Component={<SearchCard />}
+          title={"Resultats Trouvée"}
+          onCLick={() => console.log("triggered")}
+          horizontal={false}
+          elementWidth={"100%"}
+          elementHeight={scaleSize(100)}
+        />
       </View>
     </View>
   );

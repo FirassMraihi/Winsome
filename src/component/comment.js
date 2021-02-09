@@ -22,7 +22,7 @@ const Comment = ({
       />
       <CommentDescription>
         <UserName>{name}</UserName>
-        <CommentContent>{content}</CommentContent>
+        <CommentContent numberOfLines={3} >{content}</CommentContent>
       </CommentDescription>
     </CommentWrapper>
   );

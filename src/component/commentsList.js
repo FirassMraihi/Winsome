@@ -2,8 +2,10 @@ import React from "react";
 import { View, SafeAreaView } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 import { GAINSBRORO, PINK, WHITE } from "../assets/colors";
+import { scaleSize } from "../assets/style/mixins";
 import Comment from "./comment";
 import CommentInput from "./commentInput";
+import ListBlock from "./listBlock";
 
 const CommentsList = () => {
   const data = [
@@ -22,14 +24,30 @@ const CommentsList = () => {
     <SafeAreaView
       style={{
         height: "100%",
-        paddingTop: "1%",
+        paddingTop: "4%",
         
       }}
     >
-      <View style={{borderBottomWidth:0.3,borderColor:GAINSBRORO,height:'4%',alignContent:"center",justifyContent:'center'}}>
+      <View style={{borderBottomWidth:0.3,borderColor:GAINSBRORO,height:'7%',alignContent:"center",justifyContent:'center'}}>
         <CommentInput />
       </View>
-      {data && data.map((element) => <Comment />)}
+      <View
+        style={{
+          width: "100%",
+          height: "100%",
+        }}
+      >
+        <ListBlock
+          voirTout={false}
+          data={data}
+          Component={<Comment />}
+          title={""}
+          onCLick={() => console.log("triggered")}
+          horizontal={false}
+          elementWidth={"100%"}
+          elementHeight={scaleSize(100)}
+        />
+      </View>
     </SafeAreaView>
   );
 };

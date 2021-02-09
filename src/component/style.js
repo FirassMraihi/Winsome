@@ -75,7 +75,7 @@ const TextInputStyle = styled.TextInput`
 `;
 const InputHeader = styled.Text`
   color: ${BLACK};
-  font-size: ${({ size }) => (size ? size : scaleFont(18))};
+  font-size: ${({ size }) => (size ? scaleFont(size) : scaleFont(18))};
   font-weight: bold;
 `;
 
@@ -209,7 +209,17 @@ const NoticeWrapper = styled.View`
   justify-content: center;
   align-items: center;
 `;
+const SearchCardWrapper = styled.TouchableOpacity`
+  display: flex;
+  flex-direction: row;
+  padding-vertical:2;
+  padding-horizontal:2;
+  border-bottom-width:0.5;
+  border-bottom-color:${GAINSBRORO}
+
+  `;
 export {
+  SearchCardWrapper,
   NoticeWrapper,
   ButtonLabel,
   RoundedButtonWrapper,
