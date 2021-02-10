@@ -19,7 +19,7 @@ const Home = ({ navigation }) => {
       }}
     >
       <View style={{ height: scaleSize(200), width: scaleSize(375) }}>
-        <Header />
+        <Header navigation={navigation} />
       </View>
       <View
         style={{

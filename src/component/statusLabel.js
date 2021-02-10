@@ -1,9 +1,9 @@
 import React from "react";
 import { StatusWrapper } from "./style";
 
-const StatusLabel = ({ status = "Ouvert" }) => {
+const StatusLabel = ({paddingHorizontal, isRelative=false,status = "Ouvert",color }) => {
   return (
-      <StatusWrapper status={status}>{status}</StatusWrapper>
+      <StatusWrapper paddingHorizontal={paddingHorizontal}isRelative={isRelative}status={status} color={color}>{status}</StatusWrapper>
 
   );
 };

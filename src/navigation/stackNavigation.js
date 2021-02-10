@@ -5,6 +5,7 @@ import Home from "../sceen/home/home";
 import Profil from "../sceen/profil";
 import AuthenticationNavigation from "./authenticationNavigation";
 import SearchResult from "../sceen/searchResult";
+import SearchFilter from "../sceen/searchFilter";
 
 const Stack = createStackNavigator();
 
@@ -16,6 +17,8 @@ function StackNavigation() {
         <Stack.Screen name="Profil" component={Profil} />
         <Stack.Screen name="Authentication" component={AuthenticationNavigation} />
         <Stack.Screen name="SearchResult" component={SearchResult} />
+        <Stack.Screen name="SearchFilter" component={SearchFilter} />
+   
       </Stack.Navigator>
     </NavigationContainer>
   );

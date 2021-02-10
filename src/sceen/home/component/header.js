@@ -1,3 +1,4 @@
+import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
 import { View, Text } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
@@ -5,7 +6,7 @@ import { GAINSBRORO } from "../../../assets/colors";
 import RoundedInput from "../../../component/roundedInput";
 import { InputHeader } from "../../../component/style";
 import { PathLabel } from "../../profil/style/style";
-const Header = ({ user = "Jane" }) => {
+const Header = ({ user = "Jane", navigation }) => {
   return (
     <View
       style={{
@@ -44,11 +45,15 @@ const Header = ({ user = "Jane" }) => {
             height: "35%",
             width: "100%",
             alignItems: "center",
-            justifyContent: "center",
             paddingTop: "2%",
           }}
         >
-          <RoundedInput color={GAINSBRORO} height={"80%"} />
+          <TouchableOpacity
+            style={{ width: "100%", height: "90%",backgroundColor:GAINSBRORO,justifyContent:'center',borderRadius:10,paddingHorizontal:'5%' }}
+            onPress={() => navigation.navigate("SearchFilter")}
+          >
+           <Text>Chercher un centre ou un Specialist</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>

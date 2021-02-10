@@ -152,17 +152,20 @@ const GeneralInfo = styled.View`
   justify-content: center;
 `;
 const StatusWrapper = styled.Text`
-  color: ${(props) => (props.status === "Ouvert" ? "green" : "red")};
+  color: ${(props) =>
+    props.color ? props.color : props.status === "Ouvert" ? "green" : "red"};
   text-align: center;
   border-width: 1px;
-  border-color: ${(props) => (props.status === "Ouvert" ? "green" : "red")};
+  border-color: ${(props) =>
+    props.color ? props.color : props.status === "Ouvert" ? "green" : "red"};
   border-radius: 10;
-  position: absolute;
-  margin-top: 140;
-  margin-left: 5;
+  position: ${({ isRelative }) => (isRelative ? `relative` : `absolute`)};
+  ${({ isRelative }) => (isRelative ? undefined : `margin-top:140;`)}
+  ${({ isRelative }) => (isRelative ? undefined : ` margin-left:5;`)}
   padding-horizontal: 2%;
   padding-vertical: 1%;
   z-index: 10;
+  ${({paddingHorizontal})=>paddingHorizontal ? `padding-horizontal:${paddingHorizontal};`:undefined}
 `;
 const CommentWrapper = styled.View`
   padding-vertical: 3%;
@@ -212,12 +215,11 @@ const NoticeWrapper = styled.View`
 const SearchCardWrapper = styled.TouchableOpacity`
   display: flex;
   flex-direction: row;
-  padding-vertical:2;
-  padding-horizontal:2;
-  border-bottom-width:0.5;
-  border-bottom-color:${GAINSBRORO}
-
-  `;
+  padding-vertical: 2;
+  padding-horizontal: 2;
+  border-bottom-width: 0.5;
+  border-bottom-color: ${GAINSBRORO};
+`;
 export {
   SearchCardWrapper,
   NoticeWrapper,
